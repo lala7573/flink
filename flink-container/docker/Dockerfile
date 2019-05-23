@@ -19,7 +19,7 @@
 FROM openjdk:8-jre-alpine
 
 # Install requirements
-RUN apk add --no-cache bash snappy libc6-compat
+RUN apt update && apk add --no-cache bash snappy libc6-compat gcompat
 
 # Flink environment variables
 ENV FLINK_INSTALL_PATH=/opt
